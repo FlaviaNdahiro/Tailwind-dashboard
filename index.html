@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusHub Dashboard</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="min-h-screen lg:flex">
+
+        <!-- Sidebar -->
+        <aside class="hidden lg:block lg:w-64 bg-white p-6">
+            <h1 class="text-2xl font-bold text-indigo-600 mb-8">
+                CampusHub
+            </h1>
+
+            <nav>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="#" class="block text-indigo-600 font-semibold hover:text-indigo-800 transition">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-indigo-600 transition">
+                            Students
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-indigo-600 transition">
+                            Payments
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-indigo-600 transition">
+                            Courses
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-indigo-600 transition">
+                            Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-4 md:p-6 lg:p-8">
+
+            <!-- Top Bar -->
+            <header class="flex flex-col gap-4 mb-8 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold">Dashboard</h2>
+                    <p class="text-gray-500 mt-1">
+                        Welcome back, Admin!
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <input
+                        type="search"
+                        placeholder="Search students..."
+                        aria-label="Search students"
+                        class="w-full sm:w-64 rounded-lg border border-gray-300 bg-white px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    >
+
+                    <div
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-indigo-600 font-bold text-white"
+                        role="img"
+                        aria-label="Admin avatar"
+                    >
+                        A
+                    </div>
+                </div>
+            </header>
+
+            <!-- Statistics Cards -->
+            <section class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4 mb-8">
+
+                <div class="rounded-xl bg-white p-5 shadow-sm">
+                    <p class="text-sm text-gray-500">Total Students</p>
+                    <h3 class="mt-2 text-2xl font-bold">1,250</h3>
+                    <p class="mt-2 text-sm text-green-600">+8% this month</p>
+                </div>
+
+                <div class="rounded-xl bg-white p-5 shadow-sm">
+                    <p class="text-sm text-gray-500">Total Revenue</p>
+                    <h3 class="mt-2 text-2xl font-bold">RWF 8.5M</h3>
+                    <p class="mt-2 text-sm text-green-600">+12% this month</p>
+                </div>
+
+                <div class="rounded-xl bg-white p-5 shadow-sm">
+                    <p class="text-sm text-gray-500">Pending Payments</p>
+                    <h3 class="mt-2 text-2xl font-bold">86</h3>
+                    <p class="mt-2 text-sm text-yellow-600">Needs attention</p>
+                </div>
+
+                <div class="rounded-xl bg-white p-5 shadow-sm">
+                    <p class="text-sm text-gray-500">Attendance</p>
+                    <h3 class="mt-2 text-2xl font-bold">94%</h3>
+                    <p class="mt-2 text-sm text-green-600">+4% this month</p>
+                </div>
+
+            </section>
+
+            <!-- Student Table -->
+            <section class="mb-8 rounded-xl bg-white p-5 shadow-sm">
+                <h3 class="mb-4 text-lg font-bold">Recent Students</h3>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full min-w-[600px] text-left text-sm">
+                        <thead class="bg-gray-50 text-gray-500">
+                            <tr>
+                                <th class="p-3">Student</th>
+                                <th class="p-3">Course</th>
+                                <th class="p-3">Date</th>
+                                <th class="p-3">Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3">Alice Uwimana</td>
+                                <td class="p-3">Software Engineering</td>
+                                <td class="p-3">Oct 01, 2026</td>
+                                <td class="p-3">
+                                    <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Paid</span>
+                                </td>
+                            </tr>
+
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3">David Niyonzima</td>
+                                <td class="p-3">Networking</td>
+                                <td class="p-3">Oct 03, 2026</td>
+                                <td class="p-3">
+                                    <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-700">Pending</span>
+                                </td>
+                            </tr>
+
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3">Grace Mukamana</td>
+                                <td class="p-3">Cybersecurity</td>
+                                <td class="p-3">Oct 04, 2026</td>
+                                <td class="p-3">
+                                    <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Paid</span>
+                                </td>
+                            </tr>
+
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3">Eric Habimana</td>
+                                <td class="p-3">Data Science</td>
+                                <td class="p-3">Oct 05, 2026</td>
+                                <td class="p-3">
+                                    <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">Failed</span>
+                                </td>
+                            </tr>
+
+                            <tr class="border-b hover:bg-gray-50 transition">
+                                <td class="p-3">Diane Uwera</td>
+                                <td class="p-3">Software Engineering</td>
+                                <td class="p-3">Oct 07, 2026</td>
+                                <td class="p-3">
+                                    <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Paid</span>
+                                </td>
+                            </tr>
+
+                            <tr class="hover:bg-gray-50 transition">
+                                <td class="p-3">Samuel Mugisha</td>
+                                <td class="p-3">Networking</td>
+                                <td class="p-3">Oct 10, 2026</td>
+                                <td class="p-3">
+                                    <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-700">Pending</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Additional Panels -->
+            <section class="grid grid-cols-1 gap-6 xl:grid-cols-2 mb-8">
+
+                <!-- Recent Activity -->
+                <div class="rounded-xl bg-white p-5 shadow-sm">
+                    <h3 class="mb-4 text-lg font-bold">Recent Activity</h3>
+
+                    <ul class="space-y-4">
+                        <li class="border-b pb-3">
+                            <p class="font-medium">New student registered</p>
+                            <p class="text-sm text-gray-500">Alice joined Software Engineering</p>
+                        </li>
+                        <li class="border-b pb-3">
+                            <p class="font-medium">Payment received</p>
+                            <p class="text-sm text-gray-500">A student completed a payment</p>
+                        </li>
+                        <li>
+                            <p class="font-medium">Course updated</p>
+                            <p class="text-sm text-gray-500">The Networking course was updated</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Course Progress -->
+                <div class="rounded-xl bg-white p-5 shadow-sm">
+                    <h3 class="mb-4 text-lg font-bold">Course Progress</h3>
+
+                    <div class="mb-5">
+                        <div class="mb-2 flex justify-between">
+                            <span>Software Engineering</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="h-2 rounded-full bg-gray-200">
+                            <div class="h-2 w-4/5 rounded-full bg-indigo-600"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <div class="mb-2 flex justify-between">
+                            <span>Networking</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="h-2 rounded-full bg-gray-200">
+                            <div class="h-2 w-[65%] rounded-full bg-green-500"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-2 flex justify-between">
+                            <span>Cybersecurity</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="h-2 rounded-full bg-gray-200">
+                            <div class="h-2 w-[45%] rounded-full bg-yellow-500"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Add Student Form -->
+            <section class="rounded-xl bg-white p-5 shadow-sm">
+                <h3 class="mb-5 text-lg font-bold">Add New Student</h3>
+
+                <form class="grid grid-cols-1 gap-4 md:grid-cols-2">
+
+                    <div>
+                        <label for="student-name" class="mb-2 block text-sm font-medium">
+                            Student Name
+                        </label>
+                        <input
+                            id="student-name"
+                            type="text"
+                            placeholder="Enter student name"
+                            required
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="student-email" class="mb-2 block text-sm font-medium">
+                            Email Address
+                        </label>
+                        <input
+                            id="student-email"
+                            type="email"
+                            placeholder="Enter email address"
+                            required
+                            class="w-full rounded-lg border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        >
+                    </div>
+
+                    <div>
+                        <label for="student-course" class="mb-2 block text-sm font-medium">
+                            Course
+                        </label>
+                        <select
+                            id="student-course"
+                            required
+                            class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        >
+                            <option value="">Select a course</option>
+                            <option>Software Engineering</option>
+                            <option>Networking</option>
+                            <option>Cybersecurity</option>
+                            <option>Data Science</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="student-status" class="mb-2 block text-sm font-medium">
+                            Payment Status
+                        </label>
+                        <select
+                            id="student-status"
+                            class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                        >
+                            <option>Pending</option>
+                            <option>Paid</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <button
+                            type="submit"
+                            class="rounded-lg bg-indigo-600 px-5 py-2 font-medium text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                        >
+                            Add Student
+                        </button>
+                    </div>
+
+                </form>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
